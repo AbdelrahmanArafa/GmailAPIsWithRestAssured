@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="RunTests">
+        <classes>
+            <class name="Test.ValidScenarios">
+                <methods>
+                    <include name="ListAllMessages"></include>
+                    <include name="ListSingleMessageWithID"></include>
+                    <include name="SendMessage"></include>
+                    <include name="MoveMessageToTrash"></include>
+                    <include name="UntrashMessage"></include>
+                    <include name="DeleteMessage"></include>
+                </methods>
+            </class>
+
+
+            <class name="Test.InvalidScenarios">
+                <methods>
+                    <include name="ListMessagesWithInvalidAccessToken"></include>
+                    <include name="GetMessageInvalidID"></include>
+                    <include name="SendMessageWithInvalidRequestFormat"></include>
+                    <include name="SendMessageWithMaliciousContent"></include>
+                    <include name="SendEmptyMessage"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
